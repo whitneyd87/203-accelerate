@@ -22,9 +22,9 @@ get_header(); ?>
 			?>
 				<article class="case-study">
 				     <aside class="case-study-sidebar">
-				          <h2><?php the_title(); ?></h2>
-				          <h4><?php echo $services; ?></h4>
-				          <h4><span>Client: <?php echo $client ?></span></h4>
+				          <h2 class="title"><?php the_title(); ?></h2>
+				          <h5 class="services"><?php echo $services; ?></h5>
+				          <h6 class="client"><span>Client: <?php echo $client ?></span></h6>
 
 				          <?php the_content(); ?>
 
@@ -32,15 +32,21 @@ get_header(); ?>
 				     </aside>
 
 				     <div class="case-study-images">
-				     	<?php if($image_1){
-				     		echo wp_get_attachment_image($image_1, $size);
-				     	} ?>  	
-				     	<?php if($image_2){
-				     		echo wp_get_attachment_image($image_2, $size);
-				     	} ?>  	
-				     	<?php if($image_3){
-				     		echo wp_get_attachment_image($image_3, $size);
-				     	} ?>
+				     	<div class="case-study-image">
+					     	<?php if($image_1){
+					     		echo wp_get_attachment_image($image_1, $size);
+					     	} ?>  	
+					    </div>
+					    <div class="case-study-image">
+					     	<?php if($image_2){
+					     		echo wp_get_attachment_image($image_2, $size);
+					     	} ?>
+					    </div> 	
+					    <div class="case-study-image">
+					     	<?php if($image_3){
+					     		echo wp_get_attachment_image($image_3, $size);
+					     	} ?>
+					    </div>
 				     </div>
 				</article>
 		
